@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brilliance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+<body>
+    <header class="header">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-12">
+                  <nav class="navbar navbar-expand-lg navbar-dark  bg-dark fixed-top">
+                    <a class="navbar-brand" href="#">Brilliance</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+              
+                          <div class="btn-group mr-2">
+                            <button class="btn btn-secondary" type="button" id="courses" style="height: 38px;">
+                              <a href="courses.html">Courses Offered</a> 
+                            </button>
+                            <button type="button" class="btn  btn-secondary dropdown-toggle dropdown-toggle-split"  style="height: 38px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="courses.html#ethical-hacking">Ethical Hacking</a>
+                                <a class="dropdown-item" href="courses.html#dsa">Data Structures</a>
+                                <a class="dropdown-item" href="courses.html#web-dev">Web Development</a>
+                            </div>
+                          </div>
+                        </li>
+                        
+                        <li class="nav-item ">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#apply" >Apply Now<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#contact-us">Contact Us</a>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+                
+            </div>
+        </div>
+
+    </header>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+   
+    <!-- Button trigger modal -->
+    <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Applied Successfully!!!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>Welcome to Brilliance</h5>
+            <p>Further details will be sent in your email</p>
+          </div>
+          <div class="modal-footer">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="apply" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Get Started</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="f-name">First Name</label>
+              <input type="text" class="form-control" id="f-name">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="l-name">Last Name</label>
+              <input type="text" class="form-control" id="l-name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="contact">Mobile No.</label>
+              <input type="number" class="form-control" id="contact">
+            </div>
+          </div>
+         
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="xyz@email.com">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputState">City</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Patna</option>
+                <option>Kolkata</option>
+              </select>
+            </div>
+           
+           
+            <div class="form-group col-md-6">
+              <label for="inputZip">Zip</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="courses-opts">Courses</label>
+              <select id="courses-opts" class="form-control">
+                <option selected>Choose...</option>
+                <option>Ethical Hacking</option>
+                <option>Data Structures</option>
+                <option>Web Development</option>
+                
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="level-opts">Level</label>
+              <select id="level-opts" class="form-control">
+                <option selected>Choose...</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+                
+              </select>
+            </div>
+          </div>
+            
+          <div class="row">
+            <div class="col-md-12">
+              <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#submitModal" class="btn btn-primary" style="width: 100%;">Submit</button>
+            </div>
+            
+          </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <section id="start">
+      <div class="container bg-white" >
+        <div class="row justify-content-start">
+          <div class="col-lg-6">
+              <h1>Learn & Grow Together</h1>
+              <h2>Strive To Be The Best</h2>
+          </div>
+          <div class="col-lg-6">
+              <img src="Images/home/car-1.jfif
+              " id="profile" alt="hack">
+          </div>
+      </div>
+      </div>
+    
+        
+    </section>
+
+
+    <br>
+    
+    <br>
+
+    <section id="promo">
+      <div class="container-fluid promo">
+        <div class="row py-3">
+         
+
+            <div class=" col-lg-3 col-md-6 col-sm-12 text-center">
+            <h3>5000+<br>Students Enrolled</h3>
+            
+          </div>
+          
+          <div class=" col-lg-3 col-md-6 col-sm-12 text-center">
+            <h3>2000+ <br> Students Placed </h3>
+            <h3></h3>
+          </div>
+          <div class=" col-lg-3 col-md-6 col-sm-12 text-center">
+            <h3>4 Cities <br> 10+ Centres <br></h3>
+            
+          </div>
+          <div class=" col-lg-3 col-md-6 col-sm-12 text-center">
+            <h3>10,000+ Lectures<br>  Available Online </h3>
+            
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    
+    <section id="director">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col text-center mb-3">
+            <h2>Director's Message</h2>
+          </div>
+        </div>
+        <div class="row ">
+          <div class=" mt-5 col-lg-8 col-md-6 text-center">
+            <h5 class="mb-3 msg r" id="msg1" >An Investment in Knowledge </h5>
+            <h5 class="msg " id="msg2">pays the best interest...</h5>
+          </div>
+          <div class=" col-lg-4 col-md-6">
+            <img src="Images/home/director.jpg" id="director" class="img-fluid " alt="" class="s">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 offset-lg-8 col-md-6 offset-md-6">
+            <h4 class="text-right">Director</h4>
+            <h4 class="text-right">~A.K. Mathur</h4>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+
+    <section id="faculty">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="mb-5 py-3 margin-t">Our Faculty</h2>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4" style="margin-bottom: 100px;">
+            <div class="card h-100" style="display: flex;">
+              
+              <div class="card-body text-center">
+                <img src="Images/home/fac-1.webp" class=" img-fluid rounded-circle w-50 mb-3 " alt="...">
+                <h3 class="card-title">Penny</h3>
+                <h5>Ethical Hacker</h5>
+                <p class="card-text"><i class="fa fa-facebook" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-instagram" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-google" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-twitter" aria-hidden="true" style="margin-right: 10px;"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class=" col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card h-100" >
+              
+              <div class="card-body text-center">
+                <img src="Images/home/fac-2.jpg" class="img-fluid rounded-circle w-50 mb-3" alt="...">
+                <h3 class="card-title">Vishal Ahuja</h3>
+                <h5>Data Scientist</h5>
+                <p class="card-text"><i class="fa fa-facebook" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-instagram" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-google" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-twitter" aria-hidden="true" style="margin-right: 10px;"></i></p>
+              </div>
+            </div>
+          </div>
+          <div class=" col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card h-100">
+              
+              <div class="card-body text-center">
+                <img src="Images/home/fac-3.jpg" class=" img-fluid rounded-circle w-50 mb-3 " alt="...">
+                <h3 class="card-title">Prof. Leonard</h3>
+                <h5>Senior Web Developer</h5>
+                <p class="card-text"><i class="fa fa-facebook" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-instagram" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-google" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-twitter" aria-hidden="true" style="margin-right: 10px;"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class=" col-lg-4 col-md-6 col-sm-12 offset-lg-4 mb-4" >
+            <div class="card h-100">
+              
+              <div class="card-body text-center">
+                <img src="Images/home/fac-4.webp" class=" img-fluid rounded-circle w-50 mb-3 " alt="...">
+                <h3 class="card-title">Dr. Sheldon</h3>
+                <h5>Security Engineer</h5>
+                <p class="card-text"><i class="fa fa-facebook" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-instagram" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-google" aria-hidden="true" style="margin-right: 10px;"></i>
+                  <i class="fa fa-twitter" aria-hidden="true" style="margin-right: 10px;"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    
+    <br>
+
+
+    <section id="about-us">
+      <br><br>
+      
+          <div class="jumbotron jumbotron-fluid" id="jumbotron">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h1 class="display-4 text-center mt-auto mb-auto " style="color: white; font-weight:bold ">About Us</h1>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 text-center my-5">
+                <h2 class="text-center">Our Mission</h2>
+                <p>Offer the highest quality learning programs by delivering on rigorous content,
+                   best in class faculty and engaging user experiences in a personalized manner.</p>
+              </div>
+              <div class="col-lg-6 col-sm-12 text-center my-5">
+                <h2 class="text-center">Our Vision</h2>
+                <p>Through education, enable each individual in the world to pursue the career
+                   they desire and thereby improve their quality of life.</p>
+
+              </div>
+            </div>
+            <div class="row" id="company-principles">
+              <div class="col mb-3">
+                <h2 class="text-center">Company Principles</h2>
+
+              </div>
+              
+            </div>
+            <div class="row text-center">
+              <div class="col-lg-6 col-sm-12 mb-3">
+                <h3>Students first</h3>
+                <p>We exist to serve our students. While we do pay attention to competitors,
+                   we firmly believe that leadership will be achieved and sustained by obsessing over students,
+                    not competitors.
+                   Every business decision made must be for the benefit of our students.</p>
+              </div>
+              <div class="col-lg-6 col-sm-12 mb-3">
+                <h3>Demand excellence</h3>
+                <p>We set the highest standards for ourselves – even if it seems unreasonable, even if it is exhausting.
+                   This often means being data driven, 
+                  paying attention to the details and actively seeking criticism to improve our work and ourselves.</p>
+              </div>
+
+              <div class="col-lg-6 col-sm-12 mb-3">
+                <h3>Be curious</h3>
+                <p>Curiosity enables us to dig deep into challenges. It also prevents us from stagnating as it
+                   pushes us to think about why things
+                    are the way they are and drives us to improve on them.</p>
+              </div>
+              <div class="col-lg-6 col-sm-12 mb-3">
+                <h3>Think big, think long term</h3>
+                <p>We will not rest till we positively impact the lives of each individual.
+                   For this, we must think of solutions that scale and solutions that deliver value in the long term.</p>
+              </div>
+
+            </div>
+          </div>
+            
+          
+    </section>
+   
+   
+    <br><br>
+    <br><br>
+    <hr>
+    
+    
+    
+
+    <section id="contact-us">
+    <br>
+    <br>
+    <br>
+    <br>
+      <div class="container mb-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h2>Contact Us</h2>
+          </div>
+          <div class="col-sm-6">
+            <form>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Your Full Name</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="email2">Your Email</label>
+                <input type="email" class="form-control" id="email2" placeholder="xyz@gmail.com">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Contact No.</label>
+                <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="">
+              </div>
+              <div class="form-group ">
+                <label for="inputState">City</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Mumbai</option>
+                  <option>Delhi</option>
+                  <option>Patna</option>
+                  <option>Kolkata</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Query Description</label>
+                <textarea type="text" class="form-control" id="formGroupExampleInput2" placeholder=""></textarea>
+              </div>
+              <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary" style="width: 50%; margin-left:25%">Submit</button>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Alert</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>Thanks for contacting us...</h5>
+            <h5>Please be patient</h5>
+          </div>
+          <div class="modal-footer">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section id="footer">
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-lg-6 col-md-12">
+              <h4>Contacts :</h4>
+              <h5>+91 7854632154</h5>
+              <h5>brilliance_classes@email.com</h5>
+              <h5>66 ,nd Flr, Bhagheshwar Bhavan, Shivaji Park , Lt Dilip G, Mahim</h5>
+            </div>
+
+            <div class="col-lg-3 col-md-6 ml-3" >
+              <h4 class="text-left"> <u>Our Centres</u> </h4>
+              <ul>
+                <li><h5>Mumbai</h5></li>
+                <li><h5>Delhi</h5></li>
+                <li><h5>Patna</h5></li>
+                <li><h5>Kolkata</h5></li>
+              </ul>
+              
+              
+              
+              
+            </div>
+
+            <div class="col-lg-3 col-md-6" style="margin-right: -20px;">
+              <h4 id="icons">Follow Us :</h4>
+              <i class="fa fa-facebook" aria-hidden="true" style="margin-right: 10px;"></i>
+              <i class="fa fa-instagram" aria-hidden="true" style="margin-right: 10px;"></i>
+              <i class="fa fa-google" aria-hidden="true" style="margin-right: 10px;"></i>
+              <i class="fa fa-twitter" aria-hidden="true" style="margin-right: 10px;"></i>
+            </div>
+        
+          </div>
+            <div class="row">
+                <div class="col">
+                    <footer class="page-footer">
+                        <div class="footer-copyright text-center py-3">
+                            © 2020 Copyright: 
+                            Brilliance
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+            
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/301242636f.js"></script>
+    <script src="script.js"></script>
+   
+</body>
+</html>
